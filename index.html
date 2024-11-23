@@ -15,20 +15,29 @@
         <div class="user-form">
             <div class="mortgage-header">
                 <h2>Mortgage Calculator</h2>
-                <p>Clear All</p>
+                <button>Clear All</button>
             </div>
 
             <div class="mortgage-amount">
                 <label for="amount"> Mortgage Amount</label>
-                <input type="number" name="amount" id="amount" placeholder="£">
+                <input type="number" name="amount" id="amount">
+                <span class="amount-span">£</span>
+                <p class="error-message">This field is required</p>
             </div>
 
             <div class="mortgage-terms">
-                <label for="term">Mortgage Term</label>
-                <input type="number" name="term" id="term" placeholder="years">
-
-                <label for="interest-rate">Interest Rate</label>
-                <input type="number" name="interest-rate" id="interest-rate" placeholder="%">
+                <div class="mortgage-term">
+                    <label for="term">Mortgage Term</label>
+                    <input type="number" name="term" id="term" > <span class="term-span">years</span>
+                    <p class="error-message">This field is required</p>
+                </div>
+                
+                <div class="interest-rate">
+                    <label for="interest-rate">Interest Rate</label>
+                    <input type="number" name="interest-rate" id="interest-rate"> <span class="rate-span">%</span>
+                    <p class="error-message">This field is required</p>
+                </div>
+                
             </div>
 
             <div class="mortgage-type">
@@ -41,11 +50,13 @@
                 <div class="interest-only">
                     <input type="radio"> <label for="">Interest Only</label>
                 </div>
+                <p class="error-message">This field is required</p>
 
-                <button>
+                <button class="calculate-button">
                     <img src="/images/icon-calculator.svg" alt="">
                     Calculate Repayments
                 </button>
+                
             </div>
 
         </div>
