@@ -15,18 +15,112 @@
     --slate-900: hsl(202, 55%, 16%);
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans";
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    position: relative;
+}
+
+.main-container{
+    width: 80%;
+    display: flex;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.19);
+}
+
+/* User Inputs Field */
+
+.user-form{
+    width: 50%;
+    padding: 30px;
+}
+
+.mortgage-header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.mortgage-header h2{
+    color: var(--slate-900);
+}
+
+.mortgage-header p {
+    color: var(--slate-700);
+}
+
+.mortgage-amount label{
+    display: block;
+    color: var(--slate-700);
+}
+
+.mortgage-amount input{
+    
+}
+
+
+/*  Results Display */
+
+.user-results{
+    width: 50%;
+    background-color: var(--slate-900);
+    border-radius: 0px 20px 20px 50px;
+}
+
+.empty-results{
+    margin: 100px 30px;
+}
+
+.empty-results img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.empty-results h3{
+    color: var(--white);
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.empty-results p {
+    color: var(---slate-500);
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+
+.results-calculation{
+    display: none;
+}
 
 
 
 
 
 
-.attribution { 
+
+
+footer .attribution { 
     font-size: 11px; 
     text-align: center; 
 }
 
-.attribution a { 
+footer .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
     

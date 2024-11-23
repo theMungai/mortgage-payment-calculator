@@ -3,62 +3,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-
-  <style>
-    
-  </style>
 </head>
 <body>
 
-  Mortgage Calculator
-  Clear All
+    <div class="main-container">
+        <div class="user-form">
+            <div class="mortgage-header">
+                <h2>Mortgage Calculator</h2>
+                <p>Clear All</p>
+            </div>
 
-  Mortgage Amount
+            <div class="mortgage-amount">
+                <label for="amount"> Mortgage Amount</label>
+                <input type="number" name="amount" id="amount" placeholder="£">
+            </div>
 
-  Mortgage Term
+            <div class="mortgage-terms">
+                <label for="term">Mortgage Term</label>
+                <input type="number" name="term" id="term" placeholder="years">
 
-  Interest Rate
+                <label for="interest-rate">Interest Rate</label>
+                <input type="number" name="interest-rate" id="interest-rate" placeholder="%">
+            </div>
 
-  Mortgage Type
-  Repayment
-  Interest Only
+            <div class="mortgage-type">
+                <label for="">Mortgage Type</label>
 
-  Calculate Repayments
+                <div class="repayment">
+                    <input type="radio"> <label for="">Repayment</label>
+                </div>
 
-  <!-- Empty results start -->
+                <div class="interest-only">
+                    <input type="radio"> <label for="">Interest Only</label>
+                </div>
 
-  Results shown here
+                <button>
+                    <img src="/images/icon-calculator.svg" alt="">
+                    Calculate Repayments
+                </button>
+            </div>
 
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
+        </div>
 
-  <!-- Empty results end -->
+        <div class="user-results">
+            <div class="empty-results">
+                <img src="images/illustration-empty.svg" alt="">
+                <h3>Results shown here</h3>
+                <p>Complete the form and click “calculate repayments” to see what 
+                    your monthly repayments would be.</p>
+            </div>
 
-  <!-- Completed results start -->
+            <div class="results-calculation">
+                <div class="your-results">
+                    <h3>Your results</h3>
+                    <p>Your results are shown below based on the information you provided. 
+                        To adjust the results, edit the form and click “calculate repayments” again.
+                    </p>
+                </div>
 
-  Your results
+                <div class="calculation">
+                    <div class="monthly-repayments">
+                        <p>Your monthly repayments</p>
+                        <h1>£1,797.74</h1>
+                    </div>
 
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
+                    <hr>
+                    <div class="total-repayments">
+                        <p>Total you'll repay over the term</p>
+                        <h3>£539,322.94</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
   
   <footer>
     <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/theMungai" target="_blank">theMungai</a>.
       </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
