@@ -20,7 +20,7 @@
     
             <div class="mortgage-amount">
                 <label for="amount"> Mortgage Amount</label>
-                <input type="number" id="amount">
+                <input type="number" id="amount" pattern = "/\B(?=(\d{3})+(?!\d))/g">
                 <span class="amount-span">£</span>
                 <p class="error-message"></p>
             </div>

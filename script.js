@@ -5,6 +5,7 @@ const emptyResults = document.querySelector(".empty-results")
 const resultsCalculation = document.querySelector(".results-calculation");
 const errorMessage = document.querySelectorAll(".error-message");
 
+
 const calculateButton = document.querySelector(".calculate-button");
 calculateButton.addEventListener("click", () => {
     resultsCalculation.style.display = "block";
@@ -21,7 +22,7 @@ calculateButton.addEventListener("click", () => {
         <div class="calculation">
             <div class="monthly-repayments">
                 <p>Your monthly repayments</p>
-                <h1>£ ${((mortgageAmount.value) * interestRate.value * (1 + interestRate.value)**(mortgageTerm.value)*12) / ((1 + interestRate.value) ** (mortgageTerm.value) * 12) - 1} </h1>
+                <h1>£ ${parseFloat((mortgageAmount.value * (interestRate.value / 1200) * (1 + interestRate.value / 1200) ** mortgageTerm.value * 12) / ((1 + interestRate.value / 1200 ) ** mortgageTerm.value * 12) - 1).toFixed(2)} </h1>
             </div>
 
             <hr>
