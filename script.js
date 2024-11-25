@@ -48,7 +48,6 @@ calculateButton.addEventListener("click", () => {
         showError("mortgage-type-error", "This field is required")
     }
 
-    
 });
 
 // Calculations if user clicks repayment div
@@ -56,22 +55,32 @@ const totalPayments = document.querySelector(".js-total-payment")
 const monthlyPayment = document.querySelector(".js-monthly-payment");
 repaymentDiv.addEventListener("click", () => {
 
-    monthlyPayment.innerHTML = parseFloat(
+    monthlyPayment.innerHTML = `£ ${parseFloat(
     (mortgageAmount.value * (interestRate.value / 1200) * (1 + (interestRate.value / 1200)) ** (mortgageTerm.value * 12)) / 
-    ((1 + interestRate.value / 1200 ) ** (mortgageTerm.value * 12) - 1)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    ((1 + interestRate.value / 1200 ) ** (mortgageTerm.value * 12) - 1)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
 
-    totalPayments.innerHTML = parseFloat(
+    totalPayments.innerHTML = `£ ${parseFloat(
         ((mortgageAmount.value * (interestRate.value / 1200) * (1 + (interestRate.value / 1200)) ** (mortgageTerm.value * 12)) / 
-        ((1 + interestRate.value / 1200 ) ** (mortgageTerm.value * 12) - 1)) * mortgageTerm.value * 12).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+        ((1 + interestRate.value / 1200 ) ** (mortgageTerm.value * 12) - 1)) * mortgageTerm.value * 12)
+        .toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
 });
 
+
+
+// Calculations if user clicks Interest Only div
 interestOnlyDiv.addEventListener("click", () => {
-    monthlyPayment.innerHTML = "Stick"
-})
+    document.querySelector(".monthly-repayments").style.display = "none";
+    document.querySelector(".horizontal").style.display = "none";
+    document.querySelector(".total-repayments p").textContent = "Total interest over the term";
+    const totalInterest = document.querySelector(".total-repayments h3");
+    totalInterest.style.color = "hsl(61, 70%, 52%)"
+    totalInterest.style.fontSize = "1.5rem"
 
-
-
-
+    totalInterest.textContent = `£ ${parseFloat((
+        ((mortgageAmount.value * (interestRate.value / 1200) * (1 + (interestRate.value / 1200)) ** (mortgageTerm.value * 12)) / 
+        ((1 + interestRate.value / 1200 ) ** (mortgageTerm.value * 12) - 1)) * mortgageTerm.value * 12) 
+        - mortgageAmount.value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`
+});
 
 
 //  Checking Radio Boxes when divs are clicked
@@ -86,6 +95,11 @@ function checkRadio(){
     })
 }
 checkRadio()
+
+// //  Adding active states to different elements
+// mortgageAmount.addEventListener("click", () => {
+//     document.querySelector(".amount-span").style.backgroundColor = "hsl(61, 70%, 52%)";
+// })
 
 
 //  Function to show error messages
