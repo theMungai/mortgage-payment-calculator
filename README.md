@@ -13,8 +13,6 @@ This is a solution to the [Mortgage repayment calculator challenge on Frontend M
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -34,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Mortgage repayment - Github ](https://github.com/theMungai)
+- Live Site URL: [Mortgage Repayment Calculator](https://your-live-site-url.com)
 
 ## My process
 
@@ -44,20 +42,15 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
+- JavaScript
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [theMungai](https://github.com/theMungai)
+- Frontend Mentor - [@theMungai](https://www.frontendmentor.io/profile/theMungai)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I am pleased to have successfully completed the Frontend Mentor - Mortgage Repayment Calculator challenge. This project allowed me to apply my skills in HTML, CSS, and JavaScript to build an interactive and responsive mortgage calculator. I focused on ensuring that the user interface is intuitive and visually appealing across all devices, from desktops to mobile screens. The challenge gave me the opportunity to enhance my problem-solving abilities, refine my CSS layout techniques for responsiveness, and improve my JavaScript skills by creating dynamic calculations. Overall, it was a rewarding experience that deepened my understanding of frontend development and gave me confidence in building fully functional, user-friendly web applications.
