@@ -96,12 +96,6 @@ function checkRadio(){
 }
 checkRadio()
 
-// //  Adding active states to different elements
-// mortgageAmount.addEventListener("click", () => {
-//     document.querySelector(".amount-span").style.backgroundColor = "hsl(61, 70%, 52%)";
-// })
-
-
 //  Function to show error messages
 function showError(inputId, message){
     document.getElementById(inputId).textContent = message;
