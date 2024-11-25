@@ -128,13 +128,6 @@ body {
     outline: 1px solid var(--lime);
 }
 
-.mortgage-amount input::placeholder{
-    color: var(--slate-700);
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0px 8px;
-}
-
 .mortgage-terms{
     padding: 25px 0px;
     display: flex;
@@ -198,10 +191,6 @@ input[type="number"]::-webkit-outer-spin-button,
 .mortgage-type input {
     color: var(--slate-700);
     cursor: pointer;
-}
-
-.mortgage-type input[type = "radio"]:checked{
-    background-color: var(--slate-700);
 }
 
 .mortgage-type input + label {
@@ -388,3 +377,280 @@ footer .attribution a {
     color: hsl(228, 45%, 44%); 
 }
     
+
+/* ============== Media Queries ================= */
+/* ============== Mobile Device ================= */
+
+@media (max-width: 480px){
+    
+    .main-container{
+        width: 100%;
+        display: block;
+        height: auto;
+        position: relative;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%);
+        border-radius: 0px;
+        box-shadow:0px 0px 0px;
+    }
+    
+    /* User Inputs Field */
+    
+    .user-form{
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .mortgage-header{
+        display: block;
+    }
+    
+    .mortgage-header h2{
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+    }
+
+    .mortgage-terms{
+        padding: 25px 0px;
+        display: block;
+    }
+    
+    .mortgage-term {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .interest-rate{
+        width: 100%;
+    }
+    
+    .mortgage-terms input{
+        font-size: 1rem;
+    }
+
+
+    .calculate-button{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 1rem;  
+    }
+    
+    /*  Results Display */
+     .user-results{
+        width: 100%;
+        border-radius: 0px ;
+    }
+
+    .empty-results{
+        margin: 0px 30px;
+        padding: 30px 0px;
+    }
+    
+    .empty-results img{
+        width: 150px;
+    }
+
+    
+    .empty-results p {
+        font-size: 0.9rem;
+    }
+    
+    
+    .results-calculation{
+        display: none;
+        margin: 0px 30px;
+        padding: 30px 0px;
+    
+    }
+    
+    .your-results p,
+    .total-repayments p,
+    .monthly-repayments p
+     {
+        line-height: 1.7rem;
+        font-size: 0.9rem;
+    }
+    
+    .calculation{
+        padding: 20px;
+    }
+
+    
+    .total-repayments h3{
+        padding-top: 10px;
+        color: var(--white);
+    }
+    
+    
+    footer .attribution { 
+        position: relative;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 10px 0px;
+    }
+}
+
+/* ============== Tablet Device ================= */
+
+@media (min-width: 481px) and (max-width: 767px){
+    
+    .main-container{
+        width: 95%;
+        display: block;
+        height: auto;
+        position: relative;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%);
+        border-radius: 0px;
+        box-shadow:0px 0px 0px;
+    }
+    
+    /* User Inputs Field */
+    
+    .user-form{
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .mortgage-header{
+        display: block;
+    }
+    
+    .mortgage-header h2{
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+    }
+
+    .mortgage-terms{
+        padding: 25px 0px;
+        display: block;
+    }
+    
+    .mortgage-term {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .interest-rate{
+        width: 100%;
+    }
+    
+    .mortgage-terms input{
+        font-size: 1rem;
+        padding: 13px ;
+    }
+
+
+    .calculate-button{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 1rem;  
+    }
+    
+    /*  Results Display */
+     .user-results{
+        width: 100%;
+        border-radius: 10px ;
+    }
+
+    .empty-results{
+        margin: 0px 30px;
+        padding: 30px 0px;
+    }
+    
+    .empty-results img{
+        width: 150px;
+    }
+
+    
+    .empty-results p {
+        font-size: 0.9rem;
+    }
+    
+    
+    .results-calculation{
+        display: none;
+        margin: 0px 30px;
+        padding: 30px 0px;
+    
+    }
+    
+    .your-results p,
+    .total-repayments p,
+    .monthly-repayments p
+     {
+        line-height: 1.7rem;
+        font-size: 0.9rem;
+    }
+    
+    .calculation{
+        padding: 20px;
+    }
+
+    
+    .total-repayments h3{
+        padding-top: 10px;
+        color: var(--white);
+    }
+    
+    
+    footer .attribution { 
+        position: relative;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 10px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .main-container{
+        width: 95%;
+        height: auto;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 0px;
+        box-shadow:0px 0px 0px;
+    }
+
+    .calculate-button{
+        padding: 15px 20px ;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .main-container{
+        width: 95%;
+        height: auto;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .calculate-button{
+        padding: 15px 20px ;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px){
+    .main-container{
+        width: 70%;
+        height: auto;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .calculate-button{
+        padding: 15px 20px ;
+    }
+}
